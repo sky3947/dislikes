@@ -1,5 +1,5 @@
-// Get personal API key or use a default key.
-let apiKey = globalThis.APIKEY || 'AIzaSyC40Fd1dUcYIgt4l44XIVqtq_8SaS7RnVo';
+// Gets API key.
+let apiKey = globalThis.APIKEY;
 
 let dislikeElement;
 let firstCall = true;

@@ -46,6 +46,10 @@ const run = async () => {
     dislikes = `${Math.trunc(dislikes/1000000)}m`
   }
   dislikeElement.innerHTML = dislikes;
+
+  // background color: #717171
+  // foreground color: #ffffff
+  // outline color: #181818
 };
 
 // Update each second to check if video has changed.

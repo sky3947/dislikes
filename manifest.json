@@ -11,7 +11,7 @@
       "matches": ["https://*.youtube.com/watch?v=*"],
       "js": [
         "content-script.js",
-        "api-key.js"
+        "options.js"
       ]
     }
   ]

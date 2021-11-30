@@ -1,10 +1,14 @@
-// Gets API key.
+// Gets options.
+let options
 let apiKey;
+let darkMode;
 const waitForApiKey = () => setTimeout(() => {
-  apiKey = globalThis.APIKEY;
-  if (!apiKey) {
+  options = globalThis.OPTIONS;
+  if (!options) {
     waitForApiKey();
   } else {
+    apiKey = options.APIKEY;
+    darkMode = options.DARKMODE;
     update();
   }
 }, 100)
@@ -84,7 +88,9 @@ const run = async () => {
     ratioBarBackground.style.backgroundColor = '#717171';
     ratioBarBackground.style.bottom = '-8px';
     ratioBarBackground.style.position = 'absolute';
-    ratioBarBackground.style.outline = '1px solid #303030';
+    if (!darkMode) {
+      ratioBarBackground.style.outline = '1px solid #303030';
+    }
     ratioBarBackground.style.width = `${infoContainer.children[0].clientWidth + infoContainer.children[1].clientWidth + 8}px`;
 
     ratioBar = document.createElement('div');

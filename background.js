@@ -1,3 +1,6 @@
+// Default color theme is dark.
+let theme = 'dark';
+
 chrome.runtime.onInstalled.addListener(() => {
-  console.log('runnning');
+  chrome.storage.sync.set({ theme });
 });

@@ -1,3 +1,5 @@
+Currently broken due to changes in YouTube's API
+
 # Removen't Dislikes
 
 This chrome extension will bring back the dislike count on YouTube videos.\
